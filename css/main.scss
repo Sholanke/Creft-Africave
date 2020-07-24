@@ -89,6 +89,13 @@ body {
       margin: 30px 0;
     }
   }
+  &-image {
+    img {
+      width: 100%;
+      // height: 100%;
+      // position: relative;
+    }
+  }
 }
 .text-center {
   text-align: center;
@@ -105,36 +112,46 @@ body {
       margin-top: $space;
     }
     .icon-rapper {
-      $size: 140px;
-      height: $size;
-      width: $size;
-      display: block;
       margin: 0 auto;
-      background: rgb(245, 245, 245);
-      border-radius: 10px;
     }
   }
 }
-
+.icon-rapper {
+  $size: 140px;
+  height: $size;
+  width: $size;
+  display: block;
+  border-radius: 10px;
+  img {
+    height: 100%;
+  }
+}
 $timeLineWidth: 105px;
 
 .time-line-container {
   overflow-y: hidden;
   position: relative;
   padding-bottom: 100px;
+  overflow: hidden;
   .text-image-wrapper {
+    align-items: unset;
     .text,
     .image {
       flex: 1;
     }
     .text {
-      p{
+      .icon-rapper {
+        height: 100px;
+        margin-bottom: 20px;
+      }
+      p {
         max-width: 25pc;
       }
     }
     .image {
       position: relative;
       height: 400px;
+      align-self: flex-end;
       img {
         position: absolute;
         // height: 100%;
