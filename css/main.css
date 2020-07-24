@@ -1,0 +1,337 @@
+* {
+  padding: 0;
+  margin: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  background-position: center;
+  background-size: cover;
+  font-family: "Khula", sans-serif;
+  color: #2c2c4b;
+  font-size: 17px;
+  text-decoration: none;
+  list-style: none;
+  background-color: transparent;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1,
+h3 {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.1rem;
+  text-transform: capitalize;
+}
+
+h3 {
+  font-size: 35px;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 28px;
+  letter-spacing: -0.05rem;
+  line-height: 1.2;
+}
+
+button.default {
+  background-color: #2c2c4b;
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 100vh 100vh 100vh 0;
+}
+
+button.default,
+button.default * {
+  color: #fff;
+  font-weight: 600;
+}
+
+body {
+  padding-bottom: 300px;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper {
+  padding-right: 60px;
+  padding-left: 60px;
+}
+
+.max-width {
+  max-width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.main-navigation {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main-navigation .logo {
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.main-navigation .links .link {
+  margin-right: 25px;
+  display: block;
+}
+
+.hero-section {
+  min-height: calc(100vh - 112px);
+}
+
+.hero-section-text, .hero-section-image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.hero-section-text p {
+  max-width: 30pc;
+  margin: 30px 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.stacks {
+  margin: 40px 0;
+}
+
+.stacks .stack {
+  width: 33.3333%;
+  margin: 0 10px;
+  padding: 40px;
+}
+
+.stacks .stack h5 {
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+.stacks .stack .icon-rapper {
+  height: 140px;
+  width: 140px;
+  display: block;
+  margin: 0 auto;
+  background: whitesmoke;
+  border-radius: 10px;
+}
+
+.time-line-container {
+  overflow-y: hidden;
+  position: relative;
+  padding-bottom: 100px;
+}
+
+.time-line-container .text-image-wrapper .text,
+.time-line-container .text-image-wrapper .image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.time-line-container .text-image-wrapper .text p {
+  max-width: 25pc;
+}
+
+.time-line-container .text-image-wrapper .image {
+  position: relative;
+  height: 400px;
+}
+
+.time-line-container .text-image-wrapper .image img {
+  position: absolute;
+  width: 100%;
+  margin-left: 30px;
+}
+
+.time-line-container .curve {
+  width: 100vw;
+  height: 380px;
+  position: absolute;
+  bottom: 0;
+  background: #fff;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.time-line-container .curve .cover {
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.time-line-container .curve > img {
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 52.5px;
+  -webkit-transform: translate(-7px, 0);
+          transform: translate(-7px, 0);
+}
+
+.time-line-wrapper {
+  position: relative;
+  -webkit-box-align: unset;
+      -ms-flex-align: unset;
+          align-items: unset;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 100px;
+}
+
+.time-line-wrapper .time-line {
+  display: block;
+  width: 105px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  position: relative;
+  margin-right: 40px;
+}
+
+.time-line-wrapper .time-line .line {
+  width: 14px;
+  height: 100%;
+  position: absolute;
+  background: #7d57ff;
+  left: 52.5px;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  border-radius: 3px;
+  z-index: -1;
+}
+
+.time-line-wrapper .time-line-content {
+  width: 100%;
+}
+
+.time-line-wrapper .content {
+  -webkit-box-align: unset;
+      -ms-flex-align: unset;
+          align-items: unset;
+  padding: 0 0 100px 0;
+}
+
+.time-line-wrapper .content:last-of-type {
+  padding-bottom: 0;
+}
+
+.time-line-wrapper .content .js-shift {
+  position: relative;
+}
+
+.time-line-wrapper .content .image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.time-line-wrapper .content .image img {
+  width: 100%;
+}
+
+.time-line-wrapper .content .text {
+  max-width: 321.98px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.time-line-wrapper .content .text p {
+  margin: 20px 0;
+}
+
+.time-line-wrapper .time {
+  height: 105px;
+  width: 105px;
+  margin-top: 50px;
+  background: #fff;
+  border: 10px solid #f3f3f3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 50%;
+  position: absolute;
+  left: 52.5px;
+  -webkit-transform: translate(-50%, 0) !important;
+          transform: translate(-50%, 0) !important;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.time-line-wrapper .time[data-year]:before {
+  content: attr(data-year);
+  position: absolute;
+  top: -30px;
+  background: #2c2c4b;
+  color: #fff;
+  font-weight: 600;
+  -webkit-transform: translate(0, -100%);
+          transform: translate(0, -100%);
+  line-height: 1;
+  padding: 12px 15px 8px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+.time-line-wrapper .time .month {
+  font-weight: 700;
+  font-size: 14px;
+  opacity: 0.8;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.time-line-wrapper .time .date {
+  font-size: 35px;
+  line-height: 1;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creft</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Khula:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="max-width">
+        <nav class="main-navigation flex">
+          <span class="logo">Creft</span>
+          <div class="links flex">
+            <a href="#" class="link">How it works</a>
+            <a href="#" class="link">Data Ownership</a>
+            <a href="#" class="link">Research</a>
+            <a href="#" class="link">About</a>
+          </div>
+        </nav>
+        <section class="hero-section flex">
+          <div class="hero-section-text">
+            <h1>
+              Own your health. <br />
+              Advance medicine.
+            </h1>
+            <p>
+              See your entire health history—at a glance. Contribute to medical
+              research—anonymously and securely.
+            </p>
+            <button class="default">Get My Records</button>
+          </div>
+          <div class="hero-section-image"></div>
+        </section>
+      </div>
+    </div>
+
+    <div class="wrapper text-center">
+      <section class="max-width">
+        <h3>
+          Your medical records. <br />
+          Now in your hands.
+        </h3>
+        <div class="flex stacks">
+          <div class="stack">
+            <span class="icon-rapper"></span>
+            <h5>Paperwork is out</h5>
+            <p>Flip through your complete records with the tap of a button.</p>
+          </div>
+          <div class="stack">
+            <span class="icon-rapper"></span>
+            <h5>Paperwork is out</h5>
+            <p>Flip through your complete records with the tap of a button.</p>
+          </div>
+          <div class="stack">
+            <span class="icon-rapper"></span>
+            <h5>Paperwork is out</h5>
+            <p>Flip through your complete records with the tap of a button.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="wrapper time-line-container">
+      <div class="max-width time-line-wrapper flex">
+        <div class="time-line">
+          <span class="line"></span>
+        </div>
+        <div class="time-line-content">
+          <div class="content flex">
+            <div class="time" data-year="2020">
+              <p class="month">jan</p>
+              <h6 class="date">23</h6>
+            </div>
+            <div class="flex js-shift">
+              <div class="image">
+                <img src="./img/time-line-image.png" />
+              </div>
+              <div class="text">
+                <h5>Access original notes and reports</h5>
+                <p>
+                  From doctor’s reports and imaging to notes from consults and
+                  office visits, your records are always ready for your review.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="content flex">
+            <div class="time">
+              <p class="month">jan</p>
+              <h6 class="date">23</h6>
+            </div>
+            <div class="flex js-shift">
+              <div class="image">
+                <img src="./img/time-line-image.png" />
+              </div>
+              <div class="text">
+                <h5>Access original notes and reports</h5>
+                <p>
+                  From doctor’s reports and imaging to notes from consults and
+                  office visits, your records are always ready for your review.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="content flex">
+            <div class="time" data-year="2018">
+              <p class="month">jan</p>
+              <h6 class="date">23</h6>
+            </div>
+            <div class="flex js-shift">
+              <div class="image">
+                <img src="./img/time-line-image.png" />
+              </div>
+              <div class="text">
+                <h5>Access original notes and reports</h5>
+                <p>
+                  From doctor’s reports and imaging to notes from consults and
+                  office visits, your records are always ready for your review.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-image-wrapper flex">
+            <div class="text">
+              <h3>
+                Keep doctors and loved <br />
+                ones in the loop
+              </h3>
+              <br />
+              <p>
+                Securely share your comprehensive medical history with doctors
+                and loved ones, for better communication and care.
+              </p>
+              <br />
+              <p>
+                Securely share your comprehensive medical history with doctors
+                and loved ones, for better communication and care.
+              </p>
+            </div>
+            <div class="image">
+              <img src="./img/image-grid.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="max-width">
+        <div class="curve">
+          <img src="./img/curve.png" alt="" srcset="" />
+          <div class="cover"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const timeLineWrapper = document.querySelector(".time-line-wrapper");
+    const line = timeLineWrapper.querySelector(".time-line .line");
+    const times = timeLineWrapper.querySelectorAll(".content");
+    const curve = document.querySelector(".curve");
+
+    line.style.height = "0%";
+
+    const buildThresHold = () => {
+      let start = 0,
+        list = [0];
+      while (start < 1) {
+        start += 0.01;
+        list.push(start);
+      }
+      return list;
+    };
+
+    window.addEventListener("scroll", () => {
+      line.style.height = `${
+        window.innerHeight - timeLineWrapper.getBoundingClientRect().top - 100
+      }px`;
+      if (
+        curve.getBoundingClientRect().top > 0 &&
+        curve.getBoundingClientRect().top < window.innerHeight
+      ) {
+        // console.log("curve in view");
+        const breakPoint = 300;
+        const speed = 3.5;
+        let shiftX = 0;
+        let shiftY =
+          window.innerHeight - curve.getBoundingClientRect().top - 100;
+        if (shiftY <= breakPoint) {
+          shiftY = shiftY;
+        } else {
+          shiftY = breakPoint;
+          shiftX =
+            window.innerHeight -
+            curve.getBoundingClientRect().top -
+            60 -
+            breakPoint;
+        }
+
+        curve.querySelector(".cover").style.transform = `translate(${
+          (shiftX - 50) * speed
+        }px,${shiftY}px)`;
+      }
+    });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.map((entry) => {
+          if (entry.isIntersecting && entry.boundingClientRect.top > 0) {
+            entry.target.style.opacity = `${
+              (window.innerHeight - entry.boundingClientRect.top - 100) / 300
+            }`;
+            const shift =
+              (1 -
+                (window.innerHeight - entry.boundingClientRect.top - 100) /
+                  300) *
+              100;
+            const shiftNode = (entry.target.querySelector(
+              ".js-shift"
+            ).style.transform = `translate(${shift >= 0 ? shift : 0}px, 0px)`);
+            // console.log(shift >= 0 ? shift : 0);
+          }
+        });
+      },
+      {
+        rootMargin: "1000px 0px 0px 0px",
+        threshold: buildThresHold(),
+      }
+    );
+
+    Array.from(times).map((time) => observer.observe(time));
+  </script>
+</html>
